@@ -85,11 +85,46 @@ header nav ul li {
 }
 .education-sec {
   height: 100vh;
-  width: 20vw;
+  width: 100vw;
   z-index: 20;
   background-color: transparent;
   position: relative;
 }
+.education-sec h1 {
+  text-align: center;
+}
 .techstack {
   height: 100vh;
+}
+
+.education-sec .container {
+  padding: 200px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edu-card {
+  padding: 50px 50px;
+  position: relative;
+}
+.edu-card::before {
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: #5db443;
+  border-radius: 50%;
+  transform: translate(-150%, -10%);
+
+}
+.edu-card p {
+  margin: 0;
+  
+}
+.edu-card .yr p {
+  font-size: 14px;
+  color: grey;
+}
+.edu-card p {
+  font-size: 20px;
 }
