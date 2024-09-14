@@ -18,30 +18,30 @@ export function Model(props) {
   const modelRef = useRef();
   const { camera, scene } = useThree();
   const timeline = gsap.timeline();
-  const { cameraPositions, scenePosition, sceneRotation, scale, cameraFov } =
-    useControls({
-      cameraPositions: {
-        name: "camera",
-        value: { x: 0, y: 0, z: 100 },
-        step: 1,
-      },
-      cameraFov: {
-        value: 50,
-        step: 1,
-      },
-      scenePosition: {
-        value: { x: -80, y: -40, z: 15 },
-        step: 1,
-      },
-      sceneRotation: {
-        value: { x: 0, y: 0, z: 0 },
-        step: 0.1,
-      },
-      scale: {
-        value: 1,
-        step: 0.1,
-      },
-    });
+  // const { cameraPositions, scenePosition, sceneRotation, scale, cameraFov } =
+  //   useControls({
+  //     cameraPositions: {
+  //       name: "camera",
+  //       value: { x: 0, y: 0, z: 100 },
+  //       step: 1,
+  //     },
+  //     cameraFov: {
+  //       value: 50,
+  //       step: 1,
+  //     },
+  //     scenePosition: {
+  //       value: { x: -80, y: -40, z: 15 },
+  //       step: 1,
+  //     },
+  //     sceneRotation: {
+  //       value: { x: 0, y: 0, z: 0 },
+  //       step: 0.1,
+  //     },
+  //     scale: {
+  //       value: 1,
+  //       step: 0.1,
+  //     },
+  //   });
   // useFrame(() => {
   //   //modelRef.current.rotation.y += 0.005;
   //   camera.position.x = cameraPositions.x;
@@ -81,8 +81,8 @@ export function Model(props) {
         },
       })
       .to(scene.position, {
-        x: -60,
-        y: -28,
+        x: -80,
+        y: -40,
         z: 15,
         ease: "power1.inOut",
         scrollTrigger: {
@@ -148,9 +148,9 @@ export function Model(props) {
         },
       })
       .to(scene.rotation, {
-        x: 8,
-        y: 4,
-        z: 4,
+        x: 3,
+        y: 3,
+        z: 3,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: ".techstack",
@@ -177,7 +177,7 @@ export function Model(props) {
           material={materials["Material.001"]}
         />
       </group>
-      <PerspectiveCamera
+      {/* <PerspectiveCamera
         attach={(parent, self) => {
           const cameraHelper = new CameraHelper(self);
           parent.add(cameraHelper);
@@ -189,7 +189,7 @@ export function Model(props) {
         makeDefault
         ref={cameraRef}
         position={[0, 0, 100]}
-      ></PerspectiveCamera>
+      ></PerspectiveCamera> */}
     </group>
   );
 }
