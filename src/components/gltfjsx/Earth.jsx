@@ -132,6 +132,16 @@ export function Model(props) {
           immediateRender: false,
           markers: true,
         },
+      }).to(".header", {
+        background: "#000177",
+        scrollTrigger: {
+          trigger: ".education-sec",
+          start: "top bottom",
+          end: "top top",
+          scrub: true,
+          immediateRender: false,
+          markers: true,
+        },
       })
       .to(scene.position, {
         x: 60,

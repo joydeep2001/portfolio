@@ -2,7 +2,7 @@
 
 export default function Header(props) {
   return (
-    <header>
+    <header className="header">
       <nav>
         <ul>
           <li>Home</li>
