@@ -93,9 +93,6 @@ header nav ul li {
 .education-sec h1 {
   text-align: center;
 }
-.techstack {
-  height: 100vh;
-}
 
 .education-sec .container {
   padding: 200px 100px;
@@ -127,4 +124,33 @@ header nav ul li {
 }
 .edu-card p {
   font-size: 20px;
+}
+
+.techstack {
+  height: 100vh;
+  overflow-x: scroll;
+  position: relative;
+  z-index: 19;
+  
+}
+.techstack .container {
+  display: flex;
+  flex-grow: 1;
+
+}
+.techstack h1 {
+  text-align: center;
+  width: 100vw;
+}
+
+.techstack .img-cont {
+  height: 300px;
+  width: 300px;
+  flex-shrink: 0;
+}
+.techstack .img-cont img {
+  height: 100%;
+  width: 100%;
+}
+
 }
