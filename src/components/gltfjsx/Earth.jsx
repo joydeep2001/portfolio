@@ -127,7 +127,7 @@ export function Model(props) {
         scrollTrigger: {
           trigger: ".education-sec",
           start: "top bottom",
-          end: "top top",
+          end: "top 20%",
           scrub: true,
           immediateRender: false,
           markers: true,
@@ -144,8 +144,8 @@ export function Model(props) {
         },
       })
       .to(scene.position, {
-        x: 60,
-        y: -28,
+        x: 70,
+        y: -40,
         z: 15,
         ease: "power1.inOut",
         scrollTrigger: {
@@ -158,9 +158,9 @@ export function Model(props) {
         },
       })
       .to(scene.rotation, {
-        x: 3,
-        y: 3,
-        z: 3,
+        x: 5,
+        y: 6,
+        z: 4,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: ".techstack",
