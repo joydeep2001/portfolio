@@ -12,7 +12,7 @@ import { CameraHelper } from "three";
 
 export function Model(props) {
   const { nodes, materials } = useGLTF(
-    "https://clique-ledger-s3.s3.ap-south-1.amazonaws.com/output.glb"
+    "/portfolio/model_3d/output.glb"
   );
 
   const modelRef = useRef();
@@ -205,5 +205,5 @@ export function Model(props) {
 }
 
 useGLTF.preload(
-  "https://clique-ledger-s3.s3.ap-south-1.amazonaws.com/output.glb"
+  "/portfolio/model_3d/output.glb"
 );
