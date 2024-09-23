@@ -4,32 +4,21 @@ import gsap from "gsap";
 function TechStack() {
   
   useLayoutEffect(() => {
-    gsap.to(document.querySelector(".techstack .container"), {
-      x: -2200,
-      scrollTrigger: {
-        trigger: ".techstack .container",
-        start: "top 28%",
-        end: "+=2200",
-        scrub: true,
-        markers: true,
-
-        onEnter: () => {
-          console.log("starts");
-          document.querySelector(".techstack").style.position = "fixed";
-          document.querySelector(".techstack").style.top = "20%";
-          
+    const ctx = gsap.context(() => {
+      gsap.to(document.querySelector(".techstack .container"), {
+        x: -2200,
+        scrollTrigger: {
+          trigger: ".techstack",
+          start: "top 20%",
+          end: "+=2200",
+          scrub: true,
+          markers: true,
+          pin: true,
         },
-        onLeave: () => {
-          console.log("leave");
-          document.querySelector(".techstack").style.position = "relative";
-        },
-        onLeaveBack: () => {
-          console.log("leave back");
-          document.querySelector(".techstack").style.position = "relative";
-        },
-      },
-    });
-  });
+      });
+    })
+    return () => ctx.revert();
+  }, []);
   return (
     <section className="techstack">
       <h1>TechStack</h1>
