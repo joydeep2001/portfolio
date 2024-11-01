@@ -5,6 +5,8 @@
   --blue--: #2b82cf;
   --red--: #b20e34;
   --yellow--: #ffd166;
+  --blackhole--: #2a2a27;
+  --dark--: #000000;
 }
 
 body {
@@ -176,7 +178,7 @@ header nav ul li {
   z-index: 19;
   position: relative;
   height: 100vh;
-  
+  overflow: hidden;
 }
 .project h1 {
   text-align: center;
@@ -204,6 +206,7 @@ header nav ul li {
   position: relative;
 }
 .right.column {
+  display: flex;
   flex-direction: column-reverse;
   position: relative;
 }
@@ -212,7 +215,6 @@ header nav ul li {
 }
 .right {
   width: 65%;
-  transform: translateY(-200vh);
 }
 .content {
   display: flex;
@@ -222,11 +224,16 @@ header nav ul li {
   align-items: center;
   height: 100vh;
   position: relative;
+  padding: 0px 40px;
 }
 .content h2 {
   color: white;
   font-weight: 600;
   font-size: 50px;
+  position: relative;
+}
+.content h3 {
+  color: white;
 }
 .content p {
   font-size: 18px;
@@ -238,38 +245,39 @@ header nav ul li {
   border-radius: 25px;
   text-decoration: none;
 }
-.first {
-  background-color: var(--blue--);
-}
-.first a {
-  color: var(--blue--);
-}
-.second {
-  background-color: var(--red--);
-}
-.second a {
-  color: var(--red--);
-}
-.third {
-  background-color: var(--yellow--);
-}
-.third a {
-  color: var(--yellow--);
-}
+
 .pic {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
-.right .first {
-  background-image: url(https://github.com/webDaeve/verticalslider/blob/main/mountain-3948461_1920.jpg?raw=true);
+
+.pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  backdrop-filter: blur(5px);
+  
+  
 }
-.right .second {
-  background-image: url(https://github.com/webDaeve/verticalslider/blob/main/29970171536_191e725da1_k.jpg?raw=true);
-}
-.right .third {
-  background-image: url(https://github.com/webDaeve/verticalslider/blob/main/johnny-mcclung-uYTKzVp8loQ-unsplash.jpg?raw=true);
+
+.project .content h2::after {
+  content: ""; 
+  display: inline-block;
+  width: 36px; 
+  height: 36px;
+  background-image: url('/public/open_link_icon.jpg'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  vertical-align: middle; 
+  position: absolute;
+  cursor: pointer;
+  
 }
 
 
@@ -279,4 +287,22 @@ header nav ul li {
   background-color: #4d4646;
   position: relative;
   z-index: 19;
+}
+.tech-cont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+.tech-chip {
+  color: white;
+  background-color: rgb(53, 10, 57);
+  padding: 8px;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.tech-chip:hover {
+  background-color: rgb(40, 7, 43);
 }
