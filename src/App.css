@@ -150,6 +150,8 @@ header nav ul li {
   height: 300px;
   width: 300px;
   flex-shrink: 0;
+  margin: 30px;
+  cursor: pointer;
 }
 .techstack .img-cont img {
   height: 100%;
