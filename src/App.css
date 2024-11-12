@@ -151,7 +151,7 @@ header nav ul li {
 
 .techstack {
   height: 100vh;
-  overflow-x: scroll;
+  overflow-x: hidden;
   position: relative;
   z-index: 19;
 }
