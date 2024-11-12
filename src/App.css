@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-
 :root {
   --blue--: #2b82cf;
   --red--: #b20e34;
@@ -203,18 +202,16 @@ header nav ul li {
 }
 .project h1 {
   text-align: center;
-  
 }
 
-.project .container{
+.project .container {
   width: 100vw;
-  
+
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   box-sizing: content-box;
   overflow: hidden;
-  
 }
 .mask {
   height: 100vh;
@@ -275,7 +272,6 @@ header nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .pic img {
@@ -283,24 +279,20 @@ header nav ul li {
   width: 100%;
   object-fit: contain;
   backdrop-filter: blur(5px);
-  
-  
 }
 
 .project .content h2::after {
-  content: ""; 
+  content: "";
   display: inline-block;
-  width: 36px; 
+  width: 36px;
   height: 36px;
-  background-image: url('/public/open_link_icon.jpg'); 
-  background-size: contain; 
-  background-repeat: no-repeat; 
-  vertical-align: middle; 
+  background-image: url("/public/open_link_icon.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
   position: absolute;
   cursor: pointer;
-  
 }
-
 
 .full {
   height: 100vh;
