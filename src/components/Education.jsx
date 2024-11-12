@@ -24,7 +24,7 @@ const educationData = [
     endYear: 2022,
     status: "Passed",
     examName: "Diploma in Computer Science",
-    percentage: 87,
+    percentage: 81,
     institute: "APC Roy Polytechnic",
   },
   {
@@ -32,7 +32,7 @@ const educationData = [
     endYear: 2025,
     status: "Pursuing",
     examName: "Btech in Computer Science",
-    percentage: 87,
+    percentage: 65.5,
     institute: "Swami Vivekananda University",
   },
 ];
