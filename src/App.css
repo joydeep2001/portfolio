@@ -96,6 +96,7 @@ header nav ul li {
   z-index: 20;
   background-color: transparent;
   position: relative;
+  overflow-x: hidden;
 }
 .education-sec h1 {
   text-align: center;
@@ -129,6 +130,12 @@ header nav ul li {
 }
 .edu-card p {
   font-size: 20px;
+}
+.education-sec .building {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(100%, 0);
 }
 
 .techstack {

@@ -81,6 +81,12 @@ export default function Education() {
           <EducationCard {...data} />
         ))}
       </div>
+      <div
+        data-aos="fade-left"
+        className="building"
+      >
+        <img src="/portfolio/edu-build.png" alt="clg" />
+      </div>
     </section>
   );
 }
