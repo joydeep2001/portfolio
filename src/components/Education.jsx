@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const educationData = [
   {
@@ -44,7 +46,7 @@ function EducationCard({
   institute,
 }) {
   return (
-    <div className="edu-card">
+    <div data-aos="fade-up" className="edu-card">
       <div className="yr">
         <p>
           {startYear}-{endYear}:
@@ -66,6 +68,11 @@ function EducationCard({
 }
 
 export default function Education() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <section className="education-sec">
       <h1>Educational Background</h1>
