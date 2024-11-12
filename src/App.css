@@ -156,6 +156,7 @@ header nav ul li {
   z-index: 19;
 }
 .techstack .container {
+  padding: 200px 0px;
   display: flex;
   flex-grow: 1;
 }
