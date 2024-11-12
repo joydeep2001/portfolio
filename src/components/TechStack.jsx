@@ -67,7 +67,7 @@ function TechStack() {
         x: -3260,
         scrollTrigger: {
           trigger: ".techstack",
-          start: "top 20%",
+          start: "top top",
           end: "+=3260",
           scrub: true,
           markers: true,
