@@ -105,12 +105,24 @@ header nav ul li {
 .education-sec .container {
   padding: 200px 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .edu-card {
-  padding: 50px 50px;
+  padding: 100px 80px;
   position: relative;
+  margin: 5px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.32);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(63, 221, 200, 0.1);
+  backdrop-filter: blur(10.4px);
+  -webkit-backdrop-filter: blur(10.4px);
+  border: 1px solid rgba(91, 101, 216, 0.3);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .edu-card::before {
   content: "";
