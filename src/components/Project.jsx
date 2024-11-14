@@ -35,6 +35,19 @@ const Project = () => {
       leftBgColor: "#070f2b",
       rightBgImg: "/portfolio/flower-purple.jpg",
     },
+    {
+      id: "p0003",
+      title: "Engineersway",
+      techs: ["Next.js", "MongoDB"],
+      description: `Lorem Ipsum is simply dummy text
+         of the printing and typesetting
+         industry. Lorem Ipsum has been the
+         industry's standard dummy text ever since
+         the 1500s, when.`,
+      img: "/portfolio/clique_ledger.jpeg",
+      leftBgColor: "#070f2b",
+      rightBgImg: "/portfolio/flower-purple.jpg",
+    },
 
   ];
 
