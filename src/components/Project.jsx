@@ -44,7 +44,7 @@ const Project = () => {
          industry. Lorem Ipsum has been the
          industry's standard dummy text ever since
          the 1500s, when.`,
-      img: "/portfolio/clique_ledger.jpeg",
+      img: "/portfolio/eway.gif",
       leftBgColor: "#070f2b",
       rightBgImg: "/portfolio/flower-purple.jpg",
     },
