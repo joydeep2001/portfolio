@@ -30,7 +30,7 @@ const educationData = [
   {
     startYear: 2022,
     endYear: 2025,
-    status: "Pursuing",
+    status: "Passed",
     examName: "Btech in Computer Science",
     percentage: 65.5,
     institute: "Swami Vivekananda University",

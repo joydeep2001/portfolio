@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+# Portfolio Website - MERN & Flutter Developer
+
+A modern, responsive portfolio website showcasing MERN stack and Flutter development skills with beautiful animations and a techy design.
+
+## Features
+
+- 🎨 Modern gradient design with glassmorphism effects
+- ✨ Smooth animations and transitions
+- 🌟 Interactive particle background
+- 📱 Fully responsive across all devices
+- 🚀 Optimized performance
+- 💫 Glowing text effects and hover animations
+- 🎯 Focus on MERN (MongoDB, Express, React, Node.js) and Flutter technologies
+
+## Tech Stack
+
+- React.js
+- CSS3 with modern animations
+- React Icons
+- GSAP (for advanced animations)
+- Three.js / React Three Fiber (for 3D elements)
+
+## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

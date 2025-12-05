@@ -1,11 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  Environment,
-  GizmoHelper,
-  GizmoViewport,
-} from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Model } from "./gltfjsx/Earth";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,7 +12,9 @@ export default function Earth() {
     <Canvas
       orthographic
       camera={{ position: [0, 0, 100], zoom: 10 }}
-      shadows={true}
+      shadows={false}
+      dpr={[1, 1.5]}
+      performance={{ min: 0.5 }}
       style={{
         height: "100vh",
         width: "100vw",
@@ -25,28 +22,34 @@ export default function Earth() {
         position: "fixed",
         top: 0,
         left: 0,
-        z: 10,
+        zIndex: 5,
+        pointerEvents: "none",
       }}
-      gl={{ logarithmicDepthBuffer: true }}
+      gl={{ 
+        antialias: false,
+        powerPreference: "high-performance",
+        alpha: false,
+        stencil: false,
+        depth: true
+      }}
       className="canvas"
     >
-      {/* Lighting */}
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} intensity={1} />
-      <directionalLight position={[-5, -6, 5]} intensity={1} />
-      <pointLight position={[-5, -5, -5]} intensity={0.5} />
+      <Suspense fallback={null}>
+        {/* Optimized Lighting */}
+        <ambientLight intensity={0.6} />
+        <directionalLight position={[5, 5, 5]} intensity={0.8} castShadow={false} />
+        <directionalLight position={[-5, -6, 5]} intensity={0.6} castShadow={false} />
 
-      {/* Model */}
-      <Model />
-      {/* <Environment files="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA3L2xyL25hc2EwMDAwMS1pbWFnZS5qcGc.jpg" background /> */}
-      {/* Orbit Controls */}
-      <OrbitControls enableZoom={false} />
-      {/* <GizmoHelper alignment="top-left" margin={[80, 80]} renderPriority={1}>
-        <GizmoViewport
-          axisColors={["hotpink", "aquamarine", "#3498DB"]}
-          labelColor="black"
+        {/* Model */}
+        <Model />
+        
+        {/* Orbit Controls */}
+        <OrbitControls 
+          enableZoom={false} 
+          enablePan={false}
+          enableDamping={false}
         />
-      </GizmoHelper> */}
+      </Suspense>
     </Canvas>
   );
 }

@@ -1,90 +1,74 @@
-import React, { useLayoutEffect } from "react";
-import gsap from "gsap";
+import React, { useEffect } from "react";
 
 const techIcons = [
   {
-    name: "HTML",
-    icon: "tech-icons/HTML5.png",
+    name: "MongoDB",
+    icon: "tech-icons/MongoDB.png",
   },
   {
-    name: "CSS",
-    icon: "tech-icons/CSS3.png",
-  },
-  {
-    name: "JavaScript",
-    icon: "tech-icons/JavaScript.png",
+    name: "Express.js",
+    icon: "tech-icons/Express.png",
   },
   {
     name: "React",
     icon: "tech-icons/React.png",
   },
   {
-    name: "Next.js",
-    icon: "tech-icons/Next.js.png",
-  },
-  {
     name: "Node.js",
     icon: "tech-icons/Node.js.png",
-  },
-  {
-    name: "Node.js",
-    icon: "tech-icons/Express.png",
   },
   {
     name: "Flutter",
     icon: "tech-icons/Flutter.png",
   },
   {
-    name: "MySQL",
-    icon: "tech-icons/MySQL.png",
+    name: "JavaScript",
+    icon: "tech-icons/JavaScript.png",
   },
   {
-    name: "NGNIX",
-    icon: "tech-icons/NGINX.png",
+    name: "Tailwind CSS",
+    icon: "tech-icons/Tailwind CSS.png",
   },
   {
     name: "Git",
     icon: "tech-icons/Git.png",
   },
-  {
-    name: "MongoDB",
-    icon: "tech-icons/MongoDB.png",
-  },
-  {
-    name: "Rust",
-    icon: "tech-icons/Rust.png",
-  },
-  {
-    name: "Actix",
-    icon: "tech-icons/Actix.png",
-  },
 ];
 
 function TechStack() {
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.to(document.querySelector(".techstack .container"), {
-        x: -3260,
-        scrollTrigger: {
-          trigger: ".techstack",
-          start: "top top",
-          end: "+=3260",
-          scrub: true,
-          markers: true,
-          pin: true,
-        },
-      });
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const techItems = document.querySelectorAll('.techstack .img-cont');
+    techItems.forEach((item) => {
+      observer.observe(item);
     });
-    return () => ctx.revert();
+
+    return () => observer.disconnect();
   }, []);
+
   return (
     <section className="techstack">
-      <h1>TechStack</h1>
-
+      <h1 className="glow">Tech Stack</h1>
       <div className="container">
-        {techIcons.map(({ name, icon }) => (
-          <div title={name} className="img-cont">
-            <img alt="html" src={`/portfolio/${icon}`} />
+        {techIcons.map(({ name, icon }, index) => (
+          <div 
+            key={index} 
+            title={name} 
+            className="img-cont"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <img alt={name} src={`/portfolio/${icon}`} />
+            <span className="tech-name">{name}</span>
           </div>
         ))}
       </div>
